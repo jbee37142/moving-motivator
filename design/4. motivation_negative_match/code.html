@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Motivation Negative Match</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#5b13ec",
+                        "background-light": "#f9f8fc",
+                        "background-dark": "#161022",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hide for cleaner mobile look */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-gray-900 dark:text-white font-display overflow-x-hidden selection:bg-primary selection:text-white">
+<div class="relative flex h-full min-h-screen w-full max-w-md mx-auto flex-col group/design-root shadow-sm bg-background-light dark:bg-background-dark border-x border-gray-100 dark:border-gray-800/30">
+<!-- Top Bar -->
+<header class="sticky top-0 z-20 flex items-center bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm p-4 pb-2 justify-between">
+<button class="flex size-12 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-gray-900 dark:text-white" style="font-size: 24px;">arrow_back</span>
+</button>
+<h2 class="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-tight flex-1 text-center">Assessment</h2>
+<div class="flex size-12 items-center justify-end">
+<!-- Spacer for balance -->
+</div>
+</header>
+<!-- Progress Section -->
+<div class="flex flex-col gap-2 px-6 pt-2 pb-4">
+<div class="flex gap-6 justify-between items-end">
+<p class="text-gray-900 dark:text-white text-sm font-medium leading-normal">Question 14 of 20</p>
+<span class="text-primary text-xs font-bold">70%</span>
+</div>
+<div class="h-2 w-full rounded-full bg-gray-200 dark:bg-gray-700 overflow-hidden">
+<div class="h-full rounded-full bg-primary transition-all duration-500 ease-out" style="width: 70%;"></div>
+</div>
+</div>
+<!-- Scrollable Content -->
+<main class="flex-1 flex flex-col px-6 pb-6">
+<!-- Chip / Context Label -->
+<div class="flex justify-center py-4">
+<div class="inline-flex h-8 items-center justify-center gap-x-2 rounded-full bg-gray-200 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 px-4 shadow-sm">
+<p class="text-gray-700 dark:text-gray-300 text-xs font-semibold uppercase tracking-wider leading-normal">⚠️ Burnout Check</p>
+</div>
+</div>
+<!-- Headline -->
+<h1 class="text-gray-900 dark:text-white text-[26px] font-bold leading-tight text-center pb-8 pt-2">
+                Choose the side that drains your energy faster.
+            </h1>
+<!-- Comparison Cards (A/B) -->
+<div class="relative flex flex-col gap-4 flex-1 justify-center min-h-[360px]">
+<!-- Card A -->
+<button class="group relative flex w-full flex-1 flex-row items-center gap-4 rounded-2xl bg-white dark:bg-gray-800 border-2 border-transparent hover:border-primary/50 hover:shadow-lg active:scale-[0.98] transition-all duration-200 p-4 text-left shadow-sm">
+<div class="size-20 shrink-0 rounded-xl bg-gray-100 dark:bg-gray-700 bg-center bg-cover" data-alt="Clock face indicating tight time constraints" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDgfEic18Wd4a6DHyrgW1YZfQuBI-kAKeNQdBJkMeRedv9Zxc03uGv2aF3IHMzv15knuxm2UKxJw1-ZcSAoqCbq5QHDOXqHAMVkmbUSDvBua20_ey68zZ89ej27Kb7I7tYlEXQV3v6ZLacy1dJAXaHbmiZo2EsubQETZV25FSyTOVgc7E3PZzRyCTuQM5PBsW-ufEydL2Rq-O0xkmBMg12oskJPDkr2GfWeqTrBnOeiG0-Vwf4udqpYkt8PfW153SgtnodgMrl2PTE");'>
+</div>
+<div class="flex flex-col">
+<p class="text-gray-900 dark:text-white text-lg font-bold leading-tight mb-1 group-hover:text-primary transition-colors">Tight Deadlines</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-snug">Constant pressure to deliver without enough time</p>
+</div>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary" style="font-size: 24px;">check_circle</span>
+</div>
+</button>
+<!-- VS Badge -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none">
+<div class="flex items-center justify-center size-10 rounded-full bg-background-light dark:bg-background-dark border-4 border-white dark:border-gray-900 shadow-sm">
+<span class="text-gray-400 dark:text-gray-500 text-[10px] font-bold">VS</span>
+</div>
+</div>
+<!-- Card B -->
+<button class="group relative flex w-full flex-1 flex-row items-center gap-4 rounded-2xl bg-white dark:bg-gray-800 border-2 border-transparent hover:border-primary/50 hover:shadow-lg active:scale-[0.98] transition-all duration-200 p-4 text-left shadow-sm">
+<div class="size-20 shrink-0 rounded-xl bg-gray-100 dark:bg-gray-700 bg-center bg-cover" data-alt="Abstract messy lines representing confusion" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAF80Q3Ihwd4NORHkMYLeQpPHFKKdAM7KxlNW_kkyrO78G91NC7WqRYOtVx4ugy0FZUDexrley-OjNQhHb6zJIAPncgp2YqFH2MoDRpT7EPivhxUlqdOWj7sdAvhEvlHlpNsMegIB0LW0VOjPaWb-5sd7FGVGJI-mjFX9LvOoasxESyG4GLQzMagRGh6R0qUfRU0zC7W1AgToBd1BUQkcSFl3TR7osLbVGvH72KkM57qXmZO6_vWXei7Jk5SED8BpRXb8ezlCG_cfE");'>
+</div>
+<div class="flex flex-col">
+<p class="text-gray-900 dark:text-white text-lg font-bold leading-tight mb-1 group-hover:text-primary transition-colors">Unclear Feedback</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-snug">Ambiguous goals and lack of direction</p>
+</div>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary" style="font-size: 24px;">check_circle</span>
+</div>
+</button>
+</div>
+</main>
+<!-- Footer Action -->
+<footer class="p-6 pb-8 bg-background-light dark:bg-background-dark">
+<button class="w-full py-3 flex items-center justify-center gap-2 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined text-lg">pause_circle</span>
+<span class="text-sm font-medium">I'm done for today</span>
+</button>
+</footer>
+</div>
+</body></html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Personalization Name Entry</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#5b13ec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#161022",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#231b33",
+                        "text-primary-light": "#120d1b",
+                        "text-primary-dark": "#ffffff",
+                        "text-secondary-light": "#664c9a",
+                        "text-secondary-dark": "#a090c0",
+                        "border-light": "#d7cfe7",
+                        "border-dark": "#3a304e",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark transition-colors duration-200 font-display selection:bg-primary/30">
+<div class="relative flex h-screen w-full flex-col max-w-md mx-auto overflow-hidden">
+<!-- TopAppBar -->
+<div class="flex items-center p-4 pb-2 justify-between z-10">
+<button aria-label="Go back" class="flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors text-text-primary-light dark:text-text-primary-dark">
+<span class="material-symbols-outlined" style="font-size: 24px;">arrow_back</span>
+</button>
+<h2 class="text-text-primary-light dark:text-text-primary-dark text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-10">
+                Personalization
+            </h2>
+</div>
+<!-- Main Content Area with Scroll -->
+<div class="flex-1 flex flex-col items-center overflow-y-auto px-6 pt-4 pb-32 no-scrollbar">
+<!-- Mascot/Hero Image -->
+<div class="w-full flex justify-center py-6">
+<div class="relative w-40 h-40">
+<div class="absolute inset-0 bg-primary/20 dark:bg-primary/10 rounded-full blur-2xl transform scale-110"></div>
+<img alt="Tournament Mascot" class="relative w-full h-full object-cover rounded-full shadow-lg border-4 border-white dark:border-surface-dark" data-alt="3D abstract playful trophy or character illustration representing motivation" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlYDDbPEN628BmOIuHMxarAGrKnwlb463uIF8go3qhcUu9AS5WgXmCscspEtG5XHVJ9CO25WfggI5fJKad1idSFA4bK71ag1MkXGwE3eglxdQqIMkhFFbd3Co7g2ysjiTpaq5regXS32aps2a2FkTK2zPKMLWBJoGO97Rrgp0QSCJghxxqasy-e_bcq8HSn8SIh6WFSjYhsiTFJm2s_f70YPmgeXZvS6lj1YldEnDqO1hZFv8WEe6LO81o1_JtsSmUoCKqlqw1vgk"/>
+</div>
+</div>
+<!-- HeadlineText -->
+<div class="w-full text-center mt-2">
+<h1 class="text-text-primary-light dark:text-text-primary-dark tracking-tight text-[32px] font-bold leading-tight pt-2">
+                    Who's playing today?
+                </h1>
+</div>
+<!-- BodyText -->
+<div class="w-full text-center mt-2 mb-8">
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-base font-normal leading-normal">
+                    I'll put your name in the report (optional).
+                </p>
+</div>
+<!-- TextField -->
+<div class="w-full max-w-sm">
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark group-focus-within:text-primary transition-colors">badge</span>
+</div>
+<input aria-label="Your nickname" class="block w-full h-16 pl-12 pr-4 rounded-xl text-lg text-text-primary-light dark:text-text-primary-dark bg-surface-light dark:bg-surface-dark border-2 border-border-light dark:border-border-dark focus:border-primary focus:ring-0 focus:outline-none placeholder:text-text-secondary-light/60 dark:placeholder:text-text-secondary-dark/50 transition-all shadow-sm" placeholder="A nickname is fine" type="text"/>
+</div>
+</div>
+<!-- Spacer to push content up if needed on small screens, or just visual space -->
+<div class="h-8"></div>
+</div>
+<!-- Sticky Bottom Action Area -->
+<div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-background-light via-background-light to-transparent dark:from-background-dark dark:via-background-dark p-6 pb-8 z-20">
+<div class="flex flex-col gap-4 max-w-sm mx-auto">
+<!-- Primary Button -->
+<button class="w-full h-14 bg-primary hover:bg-primary/90 active:scale-[0.98] text-white text-lg font-bold rounded-xl shadow-lg shadow-primary/25 transition-all flex items-center justify-center gap-2 group">
+<span>Next</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<!-- Secondary Action / Skip -->
+<button class="w-full py-3 text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-primary transition-colors text-base font-medium">
+                    Skip for now
+                </button>
+</div>
+</div>
+</div>
+</body></html>

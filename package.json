@@ -1,0 +1,34 @@
+{
+  "name": "moving-motivator",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3000 --webpack",
+    "build": "next build --webpack",
+    "start": "next start -p 3000",
+    "test": "vitest run",
+    "format": "biome format",
+    "lint": "biome lint",
+    "check": "biome check"
+  },
+  "dependencies": {
+    "html-to-image": "^1.11.13",
+    "lucide-react": "^0.545.0",
+    "next": "^16.1.4",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "tailwindcss": "^4.0.6"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.2.4",
+    "@tailwindcss/postcss": "^4.1.18",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/react": "^16.2.0",
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "jsdom": "^27.0.0",
+    "typescript": "^5.7.2",
+    "vitest": "^3.0.5"
+  },
+  "packageManager": "yarn@4.12.0"
+}
