@@ -6,9 +6,9 @@ type SeoProps = {
   imagePath?: string
 }
 
-const DEFAULT_TITLE = '무빙 모티베이터 | 나의 동기 스위치 찾기'
+const DEFAULT_TITLE = 'Moving Motivator | 내 동기부여 찾기'
 const DEFAULT_DESCRIPTION =
-  '간단한 선택으로 동기부여/동기저해 패턴을 분석해 당신의 동기 스위치 Top 3를 리포트로 보여드립니다.'
+  '난 무엇에 동기부여 받을까? 3분 만에 찾아보기'
 const DEFAULT_IMAGE_PATH = '/main.png'
 
 export default function Seo({
@@ -16,7 +16,7 @@ export default function Seo({
   description,
   imagePath = DEFAULT_IMAGE_PATH,
 }: SeoProps) {
-  const resolvedTitle = title ? `${title} | 무빙 모티베이터` : DEFAULT_TITLE
+  const resolvedTitle = title ? `${title} | Moving Motivator` : DEFAULT_TITLE
   const resolvedDescription = description ?? DEFAULT_DESCRIPTION
 
   return (
@@ -29,7 +29,7 @@ export default function Seo({
 
       <meta key="og:type" property="og:type" content="website" />
       <meta key="og:locale" property="og:locale" content="ko_KR" />
-      <meta key="og:site_name" property="og:site_name" content="무빙 모티베이터" />
+      <meta key="og:site_name" property="og:site_name" content="Moving Motivator" />
       <meta key="og:title" property="og:title" content={resolvedTitle} />
       <meta
         key="og:description"
