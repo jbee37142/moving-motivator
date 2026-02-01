@@ -4,8 +4,7 @@ import {
   animalBgByElementId,
   animalByElementId,
   animalEmojiByElementId,
-  animalSummaryByElementId,
-  reportCopyByElementId,
+  reportCopyByElementId
 } from '../data/reportContent'
 import type { ElementDefinition } from '../data/types'
 import { computeFinalScores, getTopElements } from '../lib/report'
@@ -107,7 +106,7 @@ export default function ReportScreen({
             </div>
           </div>
           <p className="text-slate-600">
-            {topOne.description ?? animalSummaryByElementId[topOne.id]}
+            {topOne.description}
           </p>
           {(topOne.mascot?.keywords?.length ?? 0) > 0 && (
             <div className="flex flex-wrap gap-2">
