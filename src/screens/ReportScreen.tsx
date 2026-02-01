@@ -79,9 +79,6 @@ export default function ReportScreen({
         <h2 className="text-3xl font-semibold">
           {displayName}의 동기 스위치 Top 3
         </h2>
-        <p className="text-slate-600">
-          선택 패턴을 바탕으로 가장 강하게 반응한 요소를 정리했습니다.
-        </p>
       </div>
 
       {topOne && (
@@ -89,9 +86,6 @@ export default function ReportScreen({
           ref={cardRef}
           className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm space-y-4"
         >
-          <div className="flex items-center justify-between">
-            <p className="text-sm text-slate-500">{displayName}의 동기 스위치</p>
-          </div>
           <div className="flex flex-wrap items-center gap-4">
             <div
               className={`h-20 w-20 rounded-full flex items-center justify-center text-4xl ${animalBgByElementId[topOne.id] ?? 'bg-slate-100'}`}
