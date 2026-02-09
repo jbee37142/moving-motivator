@@ -59,7 +59,7 @@ export default function ReportScreen({
         pixelRatio: window.devicePixelRatio,
       })
       const link = document.createElement('a')
-      link.download = `동기스위치_${topOne?.name ?? 'Top1'}.png`
+      link.download = `동기스위치_${displayName}_리포트.png`
       link.href = dataUrl
       document.body.appendChild(link)
       link.click()
@@ -74,18 +74,16 @@ export default function ReportScreen({
 
   return (
     <section className="space-y-8 mb-32 break-keep wrap-anywhere">
-      <div className="space-y-3">
-        <p className="text-sm text-slate-500">개인 리포트</p>
-        <h2 className="text-3xl font-semibold">
-          {displayName}의 동기 스위치 Top 3
-        </h2>
-      </div>
+      <div ref={cardRef} className="space-y-8 bg-white p-6 rounded-2xl">
+        <div className="space-y-3">
+          <p className="text-sm text-slate-500">개인 리포트</p>
+          <h2 className="text-3xl font-semibold">
+            {displayName}의 동기 스위치 Top 3
+          </h2>
+        </div>
 
-      {topOne && (
-        <article
-          ref={cardRef}
-          className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm space-y-4"
-        >
+        {topOne && (
+          <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm space-y-4">
           <div className="flex flex-wrap items-center gap-4">
             <div
               className={`h-20 w-20 rounded-full flex items-center justify-center text-4xl ${animalBgByElementId[topOne.id] ?? 'bg-slate-100'}`}
@@ -168,6 +166,7 @@ export default function ReportScreen({
             </article>
           )
         })}
+        </div>
       </div>
 
       <div className="flex flex-wrap gap-3">
