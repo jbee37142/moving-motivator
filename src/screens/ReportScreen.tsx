@@ -91,6 +91,7 @@ export default function ReportScreen({
               {animalEmojiByElementId[topOne.id] ?? '🐾'}
             </div>
             <div>
+              <p className="text-xs text-slate-400">나와 잘맞는 회사는?</p>
               <h3 className="text-2xl font-semibold">
                 {animalByElementId[topOne.id] ?? '동물 카드'}
               </h3>
@@ -112,11 +113,7 @@ export default function ReportScreen({
               ))}
             </div>
           )}
-          {reportCopyByElementId[topOne.id]?.why && (
-            <div className="rounded-xl border border-slate-100 bg-slate-50 px-4 py-3 text-sm text-slate-600">
-              {reportCopyByElementId[topOne.id].why}
-            </div>
-          )}
+          
         </article>
       )}
 
